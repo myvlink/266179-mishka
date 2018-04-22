@@ -13,7 +13,7 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
-            <a href="#">Каталог товаров</a>
+            <a>Каталог товаров</a>
           </li>
           <li class="main-nav__list-item">
               <a href="#">Вязание на заказ</a>
@@ -32,9 +32,47 @@
         <p class="catalog__title">Каталог товаров</p>
         <ul class="catalog__list">
           <li class="catalog__item catalog__item--item1">
-            <img class="catalig__image catalog__image--item1" src="http://placehold.it/260x195" width="260px" height="195px" alt="Изображение товара">
-            <p class="catalog__product-name catalog__item-name--item1"></p>
+            <img class="catalog__image catalog__image--item1" src="http://placehold.it/260x195" width="260px" height="195px" alt="Изображение товара">
+            <p class="catalog__product-name">Зайчик-попрыгайчик</p>
+            <p class="catalog__product-characters">Рост 30 см, вес 200 г</p>
+            <p class="catalog__product-price">1 200 руб.</p>
           </li>
+          <li class="catalog__item catalog__item--item2">
+            <img class="catalog__image catalog__image--item2" src="http://placehold.it/260x195" width="260px" height="195px" alt="Изображение товара">
+            <p class="catalog__product-name">Корзинка для белья</p>
+            <p class="catalog__product-characters">Диаметр 15 см, высота 10 см</p>
+            <p class="catalog__product-price">690 руб.</p>
+          </li>
+          <li class="catalog__item catalog__item--item3">
+            <img class="catalog__image catalog__image--item3" src="http://placehold.it/260x195" width="260px" height="195px" alt="Изображение товара">
+            <p class="catalog__product-name">Большая корзинка для игрушек</p>
+            <p class="catalog__product-characters">Диаметр 30 см, высота 30 см</p>
+            <p class="catalog__product-price">1 500 руб.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="production-process">
+        <p class="production-process__title">Процесс производства</p>
+        <video class="production-process__video" width="260" height="150" controls="controls" poster="http://placehold.it/260x150">
+            <source src="#">
+        </video>
+        <p class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <button class="button" type="button">Сделать заказ</button>
+      </section>
+      <section class="modal">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__size-select">Выберите размер:</p>
+        <ul class="modal__list">
+          <li class="modal__item">
+            S
+          </li>
+          <li class="modal__item">
+            M
+          </li>
+          <li class="modal__item">
+            L
+          </li>
+          <input class="button button--size-select" type="button" value="Добавить">
         </ul>
       </section>
     </main>
