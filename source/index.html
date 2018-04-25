@@ -3,26 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/88x35" alt="Логотип_Мишка" width="88" height="35">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип_Мишка" width="88" height="35">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__list-item">
-              <a href="#">Вязание на заказ</a>
+              <a class="main-nav__link" href="#">Вязание на заказ</a>
           </li>
           <li class="main-nav__list-item">
-              <a href="#">Поиск по сайту</a>
+              <a class="main-nav__link" href="#">Поиск по сайту</a>
           </li>
           <li class="main-nav__list-item">
-              <a href="#">Корзина: пока пуста</a>
+              <a class="main-nav__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -42,33 +43,33 @@
           <h2 class="product-of-the-week__product-name">Вязаные корзинки</h2>
           <p class="product-of-the-week__week-product-status">Товар недели</p>
           <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="product-of-the-week__parameters product-parameters-list">
+          <table class="product-of-the-week__list">
             <tr>
-              <td class="product-parameters-list__field">
+              <td class="product-of-the-week__field">
                 Цвет:
               </td>
-              <td class="product-parameters-list__value">
+              <td class="product-of-the-week__value">
                 «Тиффани»/серый
               </td>
             </tr>
             <tr>
-              <td class="product-parameters-list__field">
-                Диаметр:
-              </td>
-              <td class="product-parameters-list__value">
+              <td class="product-of-the-week__field">
+              Диаметр:
+            </td>
+              <td class="product-of-the-week__value">
                 25 см
               </td>
             </tr>
             <tr>
-              <td class="product-parameters-list__field">
+              <td class="product-of-the-week__field">
                 Высота:
               </td>
-              <td class="product-parameters-list__value">
+              <td class="product-of-the-week__value">
                 15 см
               </td>
             </tr>
           </table>
-          <img class="product-of-the-week__image" src="http://placehold.it/260x315" alt="Изображение_товара" width="260" height="315">
+          <img class="product-of-the-week__image" src="img/triple-set-mobile@1x.jpg" alt="Изображение_товара" width="260" height="315">
           <p class="product-of-the-week__price">Цена: 990 руб.</p>
           <button class="product-of-the-week__button button" type="button">Заказать</button>
         </div>
@@ -97,12 +98,13 @@
             </blockquote>
             <button class="reviews__prev" type="button">Предыдущий отзыв</button>
             <button class="reviews__next" type="button">Следующий отзыв</button>
-            <a class="reviews__write button" href="#">Оставить свой</a>
+            <a class="reviews__write button" href="#">Написать</a>
           </div>
         </div>
       </section>
       <section class="contacts">
-        <div class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__list">
           <p class="contacts__email-title">e-mail:</p>
           <p class="contacts__email-text">info@mimimishkashop.ru</p>
           <p class="contacts__address-title">адрес:</p>
@@ -110,6 +112,7 @@
         </div>
       </section>
       <section class="map">
+        <h2 class="map__title visually_hidden">Карта</h2>
         <div class="map__block">
         </div>
       </section>
