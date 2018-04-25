@@ -1,24 +1,5 @@
-@font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans"),
-    url("fonts/opensans.woff2") format("woff2"),
-    url("fonts/opensans.woff") format("woff");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans Bold"),
-    url("/fonts/opensansbold.woff2") format("woff2"),
-    url("/fonts/opensansbold.woff") format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-
-body {
-  font-family: "Open Sans", "Arial", sans-serif;
-}
+@import "global.less";
+@import "fonts.less";
 @import "page-header.less";
 @import "main-nav.less";
 @import "product-categories.less";
@@ -35,9 +16,3 @@ body {
 @import "catalog.less";
 @import "production-process.less";
 @import "form.less";
-
-header,
-section,
-footer {
-  outline: 1px solid black; // временная обводка
-}
