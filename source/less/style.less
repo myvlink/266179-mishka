@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+       url("fonts/awesome.woff2") format("woff2"),
+       url("fonts/awesome.woff") format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"),
+       url("/fonts/opensansbold.woff2") format("woff2"),
+       url("/fonts/opensansbold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+@import "page-header.less";
+@import "main-nav.less";
+@import "product-categories.less";
+@import "product-of-the-week.less";
+@import "about-us.less";
+@import "reviews.less";
+@import "contacts.less";
+@import "map.less";
+@import "write-us.less";
+@import "modal.less";
+@import "page-footer.less";
+@import "social.less";
+@import "copyright.less";
+@import "catalog.less";
+@import "production-process.less";
+@import "form.less";
+
+header,
+section,
+footer {
+  outline: 1px solid black; // временная обводка
+}
