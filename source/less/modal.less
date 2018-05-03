@@ -1,5 +1,6 @@
 .modal {
-  padding: 0 30px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .modal__title {
@@ -19,9 +20,12 @@
 }
 
 .modal__list {
-  margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 70%;
 }
 
 .modal__item {
@@ -40,4 +44,32 @@
   color: rgb(255, 255, 255);
   background-color: rgb(99, 209, 187);
   border: none;
+}
+
+.modal__button {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 567px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__size-select {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal {
+    width: 567px;
+  }
 }

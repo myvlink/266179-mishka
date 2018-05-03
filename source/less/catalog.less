@@ -1,5 +1,7 @@
 .catalog {
   padding: 0 30px;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .catalog__list {
@@ -38,4 +40,32 @@
   font-weight: 700;
   color: rgb(0, 0, 0);
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  .catalog__item {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: 1050px;
+    padding: 0 200px;
+  }
+
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    display: flex;
+    flex-direction: column;
+  }
 }
