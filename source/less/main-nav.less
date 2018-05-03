@@ -1,18 +1,83 @@
 .main-nav {
-  position: absolute;
-  font-size: 17px;
-  color: rgb(0, 0, 0);
-  line-height: 24px;
-  font-weight: 700;
-  display: none; // временно
+  display: block;
+}
+
+.main-nav__toggle {
+  display: none;
 }
 
 .main-nav__list {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+.main-nav__list-item {
+  min-height: 80px;
+  display: flex;
+  border-top: 1px solid rgb(236, 236, 236);
+}
+
+.main-nav__list--new-and-sale {
+  display: none;
+}
+
+.main-nav__list--shipping {
+  display: none;
+}
+
 .main-nav__link {
+  margin: auto;
+  margin-left: 47px;
   text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-nav__list-item {
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .main-nav__list--special-nav {
+    display: flex;
+    order: 1;
+    width: 555px;
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  .main-nav__list--assortment {
+    display: flex;
+    order: 2;
+  }
+
+  .main-nav__list--shipping {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(68, 68, 68);
+    display: flex;
+    order: 3;
+  }
+
+  .main-nav__link {
+    margin: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list--new-and-sale {
+    display: flex;
+  }
 }

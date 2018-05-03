@@ -1,9 +1,46 @@
 .page-header {
+  padding: 0 30px;
   display: flex;
-  box-sizing: border-box;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .page-header__logo {
   margin: auto;
   line-height: 0;
+  height: 80px;
+  display: flex;
+}
+
+.page-header__logo img {
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 668px;
+    padding: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1050px;
+    padding: 0 200px;
+    position: relative;
+  }
+
+  .page-header__logo {
+    margin: 0;
+    left: 50%;
+    margin-left: -44px;
+  }
 }

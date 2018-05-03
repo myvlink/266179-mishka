@@ -1,5 +1,8 @@
 .product-of-the-week {
-  padding: 0 30px;
+  padding: 30px;
+  width: 260px;
+  height: 820px;
+  margin: 0 auto;
 }
 
 .product-of-the-week__product-name {
@@ -48,4 +51,18 @@
   color: rgb(68, 68, 68);
   border: 2px solid rgb(68, 68, 68);
   background-color: rgb(255, 255, 255);
+}
+
+@media (min-width: @tablet-width) {
+  .product-of-the-week {
+    width: 668px;
+    padding: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-of-the-week {
+    width: 1050px;
+    padding: 70px 200px;
+  }
 }
