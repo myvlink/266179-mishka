@@ -1,5 +1,7 @@
 .form {
   padding: 0 30px;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .form__title {
@@ -41,4 +43,42 @@
   font-weight: 400;
   border: none;
   border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.form__form-block-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__wrapper-select {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  .form__form-block-wrapper {
+    flex-direction: row;
+  }
+
+  .form__form-block-title {
+    width: 20%;
+  }
+
+  .form__wrapper-select {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 1050px;
+    padding: 0 50px;
+  }
 }

@@ -1,5 +1,7 @@
 .production-process {
   padding: 0 30px;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .production-process__title {
@@ -8,6 +10,15 @@
   font-weight: 700;
   color: rgb(0, 0, 0);
   margin: 0;
+}
+
+.production-process__wrapper-title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  display: none;
 }
 
 .production-process__description {
@@ -25,4 +36,44 @@
   color: rgb(68, 68, 68);
   background: none;
   border: 2px solid rgb(68, 68, 68);
+}
+
+.production-process__video {
+  outline: 1px solid black;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .production-process {
+    width: 668px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production-process {
+    width: 1050px;
+    padding: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .production-process__video {
+    width: 680px;
+    min-height: 460px;
+  }
+
+  .production-process__title {
+    display: none;
+  }
+
+  .production-process__wrapper-title {
+    display: block;
+  }
+
+  .production-process__description {
+    width: 250px;
+  }
 }
