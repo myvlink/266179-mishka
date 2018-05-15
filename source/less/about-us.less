@@ -1,11 +1,11 @@
 .about-us {
-  padding: 0 30px;
   width: 260px;
   margin: 0 auto;
+  padding: 27px 0;
 }
 
 .about-us__item {
-  padding-top: 80px;
+  padding-top: 85px;
   position: relative;
   font-size: 17px;
   line-height: 20px;
@@ -20,64 +20,96 @@
   margin: 0;
 }
 
-.about-us__item--eco::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-feature-flower.svg");
-  background-repeat: no-repeat;
-  top: 15px;
+.about-us__item--eco {
+  width: 175px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-flower.svg");
+    background-repeat: no-repeat;
+    top: 32px;
+    left: 8px;
+  }
 }
 
-.about-us__item--price::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-feature-money.svg");
-  background-repeat: no-repeat;
-  top: 15px;
+.about-us__item--price {
+  width: 200px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-feature-money.svg");
+    background-repeat: no-repeat;
+    top: 31px;
+    left: 0;
+  }
 }
 
-.about-us__item--social::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-feature-heart.svg");
-  background-repeat: no-repeat;
-  top: 15px;
+.about-us__item--social {
+  width: 185px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/icon-feature-heart.svg");
+    background-repeat: no-repeat;
+    top: 33px;
+    left: 8px;
+  }
 }
 
-.about-us__item--craft::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-feature-ball.svg");
-  background-repeat: no-repeat;
-  top: 15px;
+.about-us__item--craft {
+  width: 215px;
+  padding-top: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/icon-feature-ball.svg");
+    background-repeat: no-repeat;
+    top: 30px;
+    left: 3px;
+  }
 }
 
-.about-us__item--patriot::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-feature-rocket.svg");
-  background-repeat: no-repeat;
-  top: 15px;
+.about-us__item--patriot {
+  padding-top: 82px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-repeat: no-repeat;
+    top: 32px;
+    left: -6px;
+  }
 }
 
-.about-us__item--gift::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-feature-gift.svg");
-  background-repeat: no-repeat;
-  top: 15px;
+.about-us__item--gift {
+  width: 205px;
+  padding-top: 82px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icon-feature-gift.svg");
+    background-repeat: no-repeat;
+    top: 32px;
+    left: 3px;
+  }
 }
 
 .about-us__list {
@@ -90,7 +122,8 @@
 @media (min-width: @tablet-width) {
   .about-us {
     width: 668px;
-    padding: 50px;
+    padding-top: 47px;
+    padding-bottom: 25px;
   }
 
   .about-us__title {
@@ -101,18 +134,81 @@
   .about-us__list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
   }
 
   .about-us__item {
     font-size: 20px;
     line-height: 22px;
     width: 50%;
+    padding-top: 60px;
+    padding-bottom: 55px;
+
+    &--eco {
+      order: 1;
+
+      &::before {
+        top: 9px;
+        left: 9px;
+      }
+    }
+
+    &--craft {
+      order: 2;
+
+      &::before {
+        top: 9px;
+        left: 3px;
+      }
+    }
+
+    &--price {
+      order: 3;
+
+      &::before {
+        top: 5px;
+        left: 0;
+      }
+    }
+
+    &--patriot {
+      order: 4;
+
+      &::before {
+        top: 9px;
+        left: -5px;
+      }
+    }
+
+    &--social {
+      order: 5;
+
+      &::before {
+        top: 9px;
+        left: 9px;
+      }
+    }
+
+    &--gift {
+      order: 6;
+
+      &::before {
+        top: 3px;
+        left: 3px;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .about-us {
-    width: 1050px;
-    padding: 70px 50px;
+    width: 700px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

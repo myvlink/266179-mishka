@@ -2,19 +2,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 30px;
-  width: 260px;
-  height: 488px;
+  width: 320px;
+  min-height: 450px;
   margin: 0 auto;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: auto auto;
-  background-position: top;
+  background-position: top -20px center;
 }
 
 .product-categories__title {
-  margin-top: 0;
-  margin-bottom: 150px;
+  margin: 70px auto 121px auto;
+  width: 260px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
@@ -31,11 +30,30 @@
 
 .product-categories__item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 320px;
   min-height: 103px;
-  margin-left: -30px;
+  align-items: center;
+  justify-content: space-between;
+
+  &--interior {
+    background-color: rgb(99, 209, 187);
+  }
+
+  &--toys {
+    background-color: rgb(86, 195, 178);
+  }
+}
+
+.product-categories__icon {
+  fill: rgba(20, 144, 128, 0.5);
+
+  &--interior {
+    margin-right: 35px;
+  }
+
+  &--toys {
+    margin-right: 28px;
+  }
 }
 
 .product-categories__link {
@@ -48,33 +66,90 @@
   width: 130px;
 }
 
-.product-categories__item--interior {
-  background-color: rgb(99, 209, 178);
-}
-
-.product-categories__item--toys {
-  background-color: rgb(86, 195, 178);
-}
-
 @media (min-width: @tablet-width) {
+  .product-categories__wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 23px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+    }
+  }
+
   .product-categories {
-    width: 668px;
-    padding: 0 50px;
+    width: 768px;
+    min-height: 746px;
+    justify-content: space-between;
+    margin-top: -60px;
+    position: relative;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url("../img/hero-mobile@2x.jpg");
   }
 
   .product-categories__list {
     flex-direction: row;
+    width: 668px;
+    min-height: 119px;
+    margin: 0 auto;
   }
 
   .product-categories__item {
     margin: 0;
     width: 50%;
   }
+
+  .product-categories__link {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 37px;
+  }
+
+  .product-categories__icon--toys {
+    margin-right: 35px;
+  }
+
+  .product-categories__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: 500px;
+    margin: 153px auto 0 auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .product-categories__wrapper {
+    background-color: rgb(249, 249, 249);
+
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      height: 36px;
+      background-size: auto 100%;
+    }
+  }
+
   .product-categories {
     width: 1050px;
-    padding: 0 50px;
+  }
+
+  .product-categories__title {
+    font-size: 53px;
+    line-height: 57px;
+    width: 650px;
+  }
+
+  .product-categories__list {
+    width: 1050px;
   }
 }

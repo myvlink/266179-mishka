@@ -1,40 +1,59 @@
 .modal {
+  display: none;
   width: 320px;
-  margin: 0 auto;
+  min-height: 301px;
+  position: fixed;
+  top: 30vh;
+  left: 50vw;
+  margin-left: -170px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(236, 236, 236);
+  padding-top: 35px;
 }
 
 .modal__title {
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+  text-transform: uppercase;
+  width: 150px;
+  text-align: center;
   color: rgb(0, 0, 0);
-  margin: 0;
+  margin: 0 auto;
 }
 
 .modal__size-select {
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
+  width: 150px;
   color: rgb(68, 68, 68);
-  margin: 0;
+  margin: 25px auto 0 auto;
 }
 
 .modal__list {
   padding: 0;
   list-style: none;
   display: flex;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   justify-content: space-between;
-  width: 70%;
+  width: 260px;
 }
 
 .modal__item {
   font-size: 17px;
-  line-height: 17px;
+  line-height: 50px;
   font-weight: 400;
   color: rgb(68, 68, 68);
   border: 2px solid rgb(236, 236, 236);
   display: inline-block;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+
+  &:active {
+    border-color: rgb(99, 209, 187);
+  }
 }
 
 .button--size-select {
@@ -48,13 +67,17 @@
 
 .modal__button {
   display: block;
-  width: 70%;
-  margin: auto;
+  width: 260px;
+  margin: 30px auto 0 auto;
+  line-height: 48px;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .modal {
-    width: 567px;
+    width: 566px;
+    min-height: 336px;
+    margin-left: -293px;
   }
 
   .modal__title {

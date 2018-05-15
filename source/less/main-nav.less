@@ -1,5 +1,6 @@
 .main-nav {
   display: block;
+  z-index: 100;
 }
 
 .main-nav__toggle {
@@ -16,9 +17,13 @@
 }
 
 .main-nav__list-item {
-  min-height: 80px;
+  min-height: 78px;
   display: flex;
   border-top: 1px solid rgb(236, 236, 236);
+}
+
+.main-nav__list-item--cart {
+  border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .main-nav__list--new-and-sale {
@@ -30,10 +35,18 @@
 }
 
 .main-nav__link {
+  position: relative;
   margin: auto;
-  margin-left: 47px;
+  margin-left: 77px;
   text-decoration: none;
   color: rgb(0, 0, 0);
+}
+
+.main-nav__icon {
+  position: absolute;
+  left: -45px;
+  top: 5px;
+  fill: rgb(211, 210, 210);
 }
 
 @media (min-width: @tablet-width) {
@@ -45,27 +58,58 @@
 
   .main-nav__list-item {
     border: none;
-    margin-left: 10px;
-    margin-right: 10px;
+    min-height: 60px;
   }
 
   .main-nav__list--special-nav {
     display: flex;
     order: 1;
-    width: 555px;
-    margin-left: auto;
+    width: 768px;
+    min-height: 88px;
     justify-content: flex-end;
+    border-bottom: 1px solid rgb(236, 236, 236);
+  }
+
+  .main-nav__list-item--cart {
+    margin-right: 50px;
+    margin-left: 85px;
+  }
+
+  .main-nav__list-item--search {
+    width: 80px;
+    border-left: 1px solid rgb(236, 236, 236);
+    border-right: 1px solid rgb(236, 236, 236);
+  }
+
+  .main-nav__icon--cart {
+    left: -52px;
+    top: 3px;
+  }
+
+  .main-nav__icon--search {
+    left: -6px;
+    top: -6px;
   }
 
   .main-nav__list--assortment {
+    font-size: 15px;
+    line-height: 24px;
+    min-height: 50px;
     display: flex;
     order: 2;
+    margin-left: 50px;
+  }
+
+  .main-nav__list-item--knitwork {
+    margin-left: 35px;
   }
 
   .main-nav__list--shipping {
     font-size: 15px;
     line-height: 24px;
     font-weight: 400;
+    margin-right: 50px;
+    min-height: 50px;
     color: rgb(68, 68, 68);
     display: flex;
     order: 3;
@@ -74,10 +118,51 @@
   .main-nav__link {
     margin: auto;
   }
+
+  .main-nav__link-text {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav__list--assortment {
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0;
+    width: 50%;
+    order: 1;
+    border-bottom: 1px solid rgb(236, 236, 236);
+  }
+
+  .main-nav__list--special-nav {
+    width: 50%;
+    order: 2;
+  }
+
   .main-nav__list--new-and-sale {
     display: flex;
+    font-size: 15px;
+    line-height: 24px;
+    order: 3;
+  }
+
+  .main-nav__list--shipping {
+    order: 4;
+    margin-right: 0;
+  }
+
+  .main-nav__list-item--cart {
+    font-size: 17px;
+    line-height: 24px;
+    margin-right: 0;
+  }
+
+  .main-nav__list-item--catalog {
+    border-right: 1px solid rgb(236, 236, 236);
+    padding-right: 35px;
+  }
+
+  .main-nav__list-item--sale {
+    margin-left: 60px;
   }
 }
