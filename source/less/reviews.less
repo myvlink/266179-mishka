@@ -93,6 +93,11 @@
       display: block;
       position: absolute;
       background-image: url("../img/review@1x.jpg");
+      background-size: 100% auto;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
       background-repeat: no-repeat;
       background-position: center;
       width: 350px;
