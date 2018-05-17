@@ -163,9 +163,12 @@
           </div>
           <figure class="product-of-the-week__image">
             <picture>
+              <source type="image/webp" srcset="img/triple-set-desktop@1x.webp, img/triple-set-desktop@2x.webp 2x" media="(min-width: 1150px)">
+              <source type="image/webp" srcset="img/triple-set-tablet@1x.webp, img/triple-set-tablet@2x.webp 2x" media="(min-width: 768px)">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp, img/triple-set-mobile@2x.webp 2x">
               <source srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x" media="(min-width: 1150px)">
               <source srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Изображение_товара" width="260" height="315">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Изображение_товара">
             </picture>
           </figure>
           <div class="product-of-the-week__buy">
@@ -297,7 +300,7 @@
       </div>
     </footer>
   <script src="js/script.js"></script>
-  <script src="js/picturefill.js"></script>
+  <!-- <script src="js/picturefill.js"></script> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClVUm8YFS6uSmdF6jzxJCPCPZ8GrlT3Wo"></script>
   </body>
 </html>
