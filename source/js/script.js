@@ -4,9 +4,14 @@ function initMap() {
     center: uluru,
     zoom: 17
   });
+  var image = {
+    url: "../img/map-pin.svg",
+    scaledSize: new google.maps.Size(100, 100)
+}
   var marker = new google.maps.Marker({
     position: uluru,
     map: map,
-    icon: "../img/icon-map-pin.svg"
+    optimized: false,
+    icon: image
   });
 }
