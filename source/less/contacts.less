@@ -39,6 +39,14 @@
   &--email {
     height: 30px;
     border-bottom: 1px solid rgb(99, 209, 186);
+
+    &:hover {
+      color: rgb(70, 193, 174);
+    }
+
+    &:active {
+      color: rgba(70, 193, 174, 0.3);
+    }
   }
 
   &--address {
@@ -72,6 +80,15 @@
   text-transform: uppercase;
   margin: 34px auto 0 auto;
   width: 256px;
+
+  &:hover {
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
