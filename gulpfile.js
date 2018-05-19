@@ -17,6 +17,7 @@ var run = require("run-sequence");
 var del = require("del");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
+var htmlmin = require('gulp-htmlmin');
 
 
 gulp.task("style", function () {
@@ -42,6 +43,12 @@ gulp.task("compressjs", function (cb) {
     ],
     cb
   )
+});
+
+gulp.task("compresshtml", function() {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("sprite", function () {
@@ -84,6 +91,7 @@ gulp.task("build", function (done) {
     "copy",
     "style",
     "compressjs",
+    "compresshtml",
     "sprite",
     "html",
     done
