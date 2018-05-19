@@ -14,6 +14,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  &--new-and-sale {
+    display: none;
+  }
+
+  &--shipping {
+    display: none;
+  }
 }
 
 .main-nav__list-item {
@@ -21,18 +29,10 @@
   display: flex;
   align-items: center;
   border-top: 1px solid rgb(236, 236, 236);
-}
 
-.main-nav__list-item--cart {
-  border-bottom: 1px solid rgb(236, 236, 236);
-}
-
-.main-nav__list--new-and-sale {
-  display: none;
-}
-
-.main-nav__list--shipping {
-  display: none;
+  &--cart {
+    border-bottom: 1px solid rgb(236, 236, 236);
+  }
 }
 
 .main-nav__link {
@@ -41,13 +41,29 @@
   margin-left: 77px;
   text-decoration: none;
   color: rgb(0, 0, 0);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .main-nav__icon {
   position: absolute;
   left: -45px;
   top: 5px;
-  color: rgb(211, 210, 210);
+  color: rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    color: rgb(99, 209, 187);
+  }
+
+  &:active {
+    color: rgba(99, 209, 187, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -60,60 +76,64 @@
   .main-nav__list-item {
     border: none;
     min-height: 60px;
+
+    &--cart {
+      margin-right: 50px;
+      margin-left: 85px;
+    }
+
+    &--search {
+      width: 80px;
+      border-left: 1px solid rgb(236, 236, 236);
+      border-right: 1px solid rgb(236, 236, 236);
+    }
+
+    &--knitwork {
+      margin-left: 35px;
+    }
   }
 
-  .main-nav__list--special-nav {
-    display: flex;
-    order: 1;
-    width: 768px;
-    min-height: 88px;
-    justify-content: flex-end;
-    border-bottom: 1px solid rgb(236, 236, 236);
+  .main-nav__icon {
+    &--cart {
+      left: -49px;
+      top: 3px;
+    }
+
+    &--search {
+      left: -6px;
+      top: -7px;
+    }
   }
 
-  .main-nav__list-item--cart {
-    margin-right: 50px;
-    margin-left: 85px;
-  }
+  .main-nav__list {
+    &--special-nav {
+      display: flex;
+      order: 1;
+      width: 768px;
+      min-height: 88px;
+      justify-content: flex-end;
+      border-bottom: 1px solid rgb(236, 236, 236);
+    }
 
-  .main-nav__list-item--search {
-    width: 80px;
-    border-left: 1px solid rgb(236, 236, 236);
-    border-right: 1px solid rgb(236, 236, 236);
-  }
+    &--assortment {
+      font-size: 15px;
+      line-height: 24px;
+      min-height: 50px;
+      display: flex;
+      order: 2;
+      margin-left: 50px;
+    }
 
-  .main-nav__icon--cart {
-    left: -52px;
-    top: 3px;
-  }
-
-  .main-nav__icon--search {
-    left: -6px;
-    top: -6px;
-  }
-
-  .main-nav__list--assortment {
-    font-size: 15px;
-    line-height: 24px;
-    min-height: 50px;
-    display: flex;
-    order: 2;
-    margin-left: 50px;
-  }
-
-  .main-nav__list-item--knitwork {
-    margin-left: 35px;
-  }
-
-  .main-nav__list--shipping {
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 400;
-    margin-right: 50px;
-    min-height: 50px;
-    color: rgb(68, 68, 68);
-    display: flex;
-    order: 3;
+    &--shipping {
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-right: 50px;
+      min-height: 50px;
+      color: rgb(68, 68, 68);
+      display: flex;
+      order: 3;
+    }
   }
 
   .main-nav__link {
@@ -126,44 +146,60 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__list--assortment {
-    font-size: 17px;
-    line-height: 24px;
-    margin: 0;
-    width: 50%;
-    order: 1;
-    border-bottom: 1px solid rgb(236, 236, 236);
+  .main-nav__list {
+    &--assortment {
+      font-size: 17px;
+      line-height: 24px;
+      margin: 0;
+      width: 50%;
+      order: 1;
+      border-bottom: 1px solid rgb(236, 236, 236);
+    }
+
+    &--special-nav {
+      width: 50%;
+      order: 2;
+    }
+
+    &--new-and-sale {
+      display: flex;
+      font-size: 15px;
+      line-height: 24px;
+      order: 3;
+    }
+
+    &--shipping {
+      order: 4;
+      margin-right: 0;
+    }
   }
 
-  .main-nav__list--special-nav {
-    width: 50%;
-    order: 2;
+  .main-nav__list-item {
+    &--cart {
+      font-size: 17px;
+      line-height: 24px;
+      margin-right: 0;
+    }
+
+    &--catalog {
+      border-right: 1px solid rgb(236, 236, 236);
+      padding-right: 35px;
+    }
+
+    &--sale {
+      margin-left: 60px;
+    }
   }
 
-  .main-nav__list--new-and-sale {
-    display: flex;
-    font-size: 15px;
-    line-height: 24px;
-    order: 3;
-  }
+  .main-nav__icon {
+    &--cart {
+      left: -52px;
+      top: 3px;
+    }
 
-  .main-nav__list--shipping {
-    order: 4;
-    margin-right: 0;
-  }
-
-  .main-nav__list-item--cart {
-    font-size: 17px;
-    line-height: 24px;
-    margin-right: 0;
-  }
-
-  .main-nav__list-item--catalog {
-    border-right: 1px solid rgb(236, 236, 236);
-    padding-right: 35px;
-  }
-
-  .main-nav__list-item--sale {
-    margin-left: 60px;
+    &--search {
+      left: -8px;
+      top: -6px;
+    }
   }
 }

@@ -74,7 +74,6 @@
   .product-categories {
     width: 768px;
     min-height: 746px;
-    justify-content: space-between;
     margin-top: -60px;
     position: relative;
     background-position: center;
@@ -115,15 +114,17 @@
     padding-left: 37px;
   }
 
-  .product-categories__icon--toys {
-    margin-right: 5px;
+  .product-categories__icon {
+    &--toys {
+      margin-right: 5px;
+    }
   }
 
   .product-categories__title {
     font-size: 43px;
     line-height: 50px;
     width: 500px;
-    margin: 153px auto 0 auto;
+    margin: 153px auto 375px auto;
   }
 }
 
@@ -155,9 +156,30 @@
     font-size: 53px;
     line-height: 57px;
     width: 650px;
+    margin-bottom: 360px;
   }
 
   .product-categories__list {
     width: 1050px;
+  }
+
+  .product-categories__item {
+    &--interior {
+      &:hover {
+        background-color: rgb(89, 213, 188);
+        margin-top: -5px;
+      }
+    }
+
+    &--toys {
+      &:hover {
+        background-color: rgb(70, 193, 174);
+        margin-top: -5px;
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
