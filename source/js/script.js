@@ -18,7 +18,6 @@ function initMap() {
 
 var navToggle = document.querySelector(".main-nav__toggle");
 var navMain = document.querySelector(".main-nav__list");
-navMain.classList.remove("main-nav__list--nojs");
 navToggle.addEventListener("click", function() {
   if (navMain.classList.contains("main-nav__list--closed")) {
     navMain.classList.remove("main-nav__list--closed");

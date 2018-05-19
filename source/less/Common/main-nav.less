@@ -1,14 +1,20 @@
 .main-nav {
   display: block;
   z-index: 100;
+  position: relative;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
+  top: -50px;
+  right: 30px;
+  width: 21px;
+  height: 21px;
+  background: none;
+  background-image: url("../img/icon-menu-close.svg");
+  background-size: 100% auto;
+  background-position: center;
+  border: none;
 }
 
 .main-nav__list {
@@ -19,16 +25,20 @@
   padding: 0;
   margin: 0;
 
-  &--nojs {
-    display: none;
-  }
-
   &--new-and-sale {
     display: none;
   }
 
   &--shipping {
     display: none;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
   }
 }
 
