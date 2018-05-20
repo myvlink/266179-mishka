@@ -21,8 +21,10 @@
         </picture>
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list main-nav__list--assortment">
+        <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
+          <span class="main-nav__toggle-text visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list main-nav__list--assortment main-nav__list--nojs main-nav__list--closed" id="main-menu">
           <li class="main-nav__list-item main-nav__list-item--catalog">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -30,7 +32,7 @@
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__list main-nav__list--special-nav">
+        <ul class="main-nav__list main-nav__list--special-nav main-nav__list--nojs main-nav__list--closed" id="main-menu">
           <li class="main-nav__list-item main-nav__list-item--search">
             <a class="main-nav__link main-nav__link--special-nav" href="#">
               <svg class="main-nav__icon main-nav__icon--search" width="17.6" height="17.6">
@@ -159,7 +161,12 @@
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__text">
+              <span class="reviews__text-phrase">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+              </span>
+              <span class="reviews__text-phrase reviews__text-phrase--bottom">и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+              </span>
+              </p>
             <cite class="reviews__author-name">Анастасия Красильникова</cite>
             <p class="reviews__contact">@misssssiskras</p>
           </blockquote>
@@ -255,8 +262,8 @@
         </div>
       </div>
     </footer>
-  <script src="js/script.min.js"></script>
-  <script src="js/picturefill.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClVUm8YFS6uSmdF6jzxJCPCPZ8GrlT3Wo&callback=initMap"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClVUm8YFS6uSmdF6jzxJCPCPZ8GrlT3Wo&callback=initMap"></script>
   </body>
 </html>

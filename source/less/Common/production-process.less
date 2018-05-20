@@ -55,6 +55,24 @@
   margin: 0;
   background-color: rgb(128, 186, 172);
   line-height: 0;
+  position: relative;
+}
+
+.production-process__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition-duration: 0.1s;
+
+  &:hover {
+    transform: scale(1.2) translateX(-40%) translateY(-40%);
+  }
+
+  &:active {
+    transform: scale(0.8) translateX(-60%) translateY(-60%);
+    opacity: 0.3;
+  }
 }
 
 .production-process__video img {
@@ -90,6 +108,7 @@
     border: 1px solid rgb(237, 237, 237);
     border-bottom: none;
     padding: 40px 42px;
+    padding-bottom: 45px;
   }
 
   .production-process__description {
@@ -124,7 +143,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 57px;
-    margin-bottom: 105px;
+    margin-bottom: 100px;
   }
 
   .production-process__video {
