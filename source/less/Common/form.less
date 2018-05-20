@@ -49,7 +49,7 @@
   font-weight: 400;
   color: rgb(68, 68, 68);
   margin: 0;
-  margin-top: 23px;
+  margin-top: 25px;
 
   &--bottom {
     margin-top: 10px;
@@ -87,9 +87,22 @@
 .form__container {
   margin-top: 25px;
   margin-bottom: 32px;
+  position: relative;
 
   &--add {
     margin-bottom: 0;
+  }
+}
+
+.form__icon {
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: block;
+  right: 7px;
+  bottom: 16px;
+
+  &--mail {
+    right: 5px;
   }
 }
 
@@ -148,7 +161,6 @@
     opacity: 1;
   }
 }
-
 
 .form__checkbox + .form__label {
   &::before {
@@ -216,6 +228,39 @@
   margin-bottom: 55px;
 }
 
+
+.form__label {
+  &:hover {
+    &::before {
+      border-color: rgb(98, 209, 186);
+    }
+  }
+  &:active {
+    &::before {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.form__text {
+  &:hover {
+    border-color: rgb(98, 209, 186);
+  }
+  &:focus {
+    outline: none;
+    border-color: rgb(98, 209, 186);
+  }
+}
+
+.form__text:hover + .form__icon {
+  color: rgb(98, 209, 186);
+}
+
+.form__text:focus + .form__icon {
+  color: rgb(98, 209, 186);
+}
+
+
 @media (min-width: @tablet-width) {
   .form__title {
     margin-top: -60px;
@@ -277,6 +322,18 @@
 
     &--add {
       padding-top: 33px;
+    }
+  }
+
+  .form__icon {
+
+    &--phone {
+      right: 27px;
+      bottom: 18px;
+    }
+    &--mail {
+      right: 22px;
+      bottom: 65px;
     }
   }
 
@@ -348,6 +405,7 @@
   .form__text {
     font-size: 19px;
     padding-left: 17px;
+    width: 500px;
 
     &--area {
       width: 501px;
@@ -357,6 +415,14 @@
       margin-left: 25px;
       padding-top: 15px;
       padding-bottom: 10px;
+    }
+
+    &--telephone {
+      width: 485px;
+    }
+
+    &--email {
+      width: 485px;
     }
   }
 
@@ -484,8 +550,22 @@
   }
 
   .form__text {
+    width: 100%;
+
     &--area {
       width: 700px;
+    }
+  }
+
+  .form__icon {
+
+    &--phone {
+      right: 183px;
+      bottom: 18px;
+    }
+    &--mail {
+      right: 180px;
+      bottom: 65px;
     }
   }
 

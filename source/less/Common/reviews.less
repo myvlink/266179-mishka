@@ -1,8 +1,24 @@
 .reviews {
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 52px;
   width: 260px;
   margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -30px;
+    bottom: 0;
+    width: 320px;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    transform: rotate(180deg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 }
 
 .reviews__title {
@@ -104,11 +120,11 @@
 @media (min-width: @tablet-width) {
   .reviews {
     width: 668px;
-    padding: 80px 50px 132px 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    padding: 77px 50px 132px 50px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // flex-direction: row-reverse;
     position: relative;
 
     &::before {
@@ -154,12 +170,12 @@
   }
 
   .reviews__list {
-    margin-top: 46px;
+    margin-top: 49px;
   }
 
   .reviews__author-name {
     font-size: 18px;
-    margin-top: 60px;
+    margin-top: 55px;
   }
 
   .reviews__text {
@@ -172,11 +188,19 @@
     order: -2;
     width: 170px;
     margin: 0;
+    position: absolute;
+    top: 77px;
+    right: 50px;
   }
 
   .reviews__buttons {
-    margin-top: -53px;
-    margin-right: 10px;
+    position: absolute;
+    bottom: 135px;
+    right: 60px;
+  }
+
+  .reviews__contact {
+    margin-top: 5px;
   }
 
   .reviews__arrow {
@@ -195,7 +219,7 @@
 @media (min-width: @desktop-width) {
   .reviews {
     width: 1050px;
-    padding: 75px 0 190px 0;
+    padding: 75px 0 185px 0;
 
     &::after {
       height: 23px;
@@ -212,10 +236,16 @@
   .reviews__list {
     margin-left: 175px;
     margin-right: auto;
+    margin-top: 50px;
   }
 
   .reviews__text {
     width: 770px;
+    word-wrap: break-word;
+  }
+
+  .reviews__text-phrase {
+    display: block;
   }
 
   .reviews__author-name {
@@ -225,5 +255,16 @@
 
   .reviews__contact {
     line-height: 30px;
+    height: auto;
+  }
+
+  .reviews__write {
+    right: 0;
+    top: 80px;
+  }
+
+  .reviews__buttons {
+    right: 10px;
+    bottom: 185px;
   }
 }
