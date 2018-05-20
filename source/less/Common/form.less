@@ -70,6 +70,15 @@
   padding-bottom: 15px;
   width: 100%;
 
+  &:hover {
+    border-color: rgb(98, 209, 186);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgb(98, 209, 186);
+  }
+
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
   }
@@ -205,6 +214,18 @@
   padding-top: 11px;
   padding-bottom: 11px;
 
+  &:hover {
+    &::before {
+      border-color: rgb(98, 209, 186);
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
   &--contacts {
     padding: 0;
     margin-bottom: 5px;
@@ -226,30 +247,6 @@
   text-transform: uppercase;
   margin-top: 30px;
   margin-bottom: 55px;
-}
-
-
-.form__label {
-  &:hover {
-    &::before {
-      border-color: rgb(98, 209, 186);
-    }
-  }
-  &:active {
-    &::before {
-      border-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-}
-
-.form__text {
-  &:hover {
-    border-color: rgb(98, 209, 186);
-  }
-  &:focus {
-    outline: none;
-    border-color: rgb(98, 209, 186);
-  }
 }
 
 .form__text:hover + .form__icon {
@@ -326,11 +323,11 @@
   }
 
   .form__icon {
-
     &--phone {
       right: 27px;
       bottom: 18px;
     }
+
     &--mail {
       right: 22px;
       bottom: 65px;
@@ -558,11 +555,11 @@
   }
 
   .form__icon {
-
     &--phone {
       right: 183px;
       bottom: 18px;
     }
+
     &--mail {
       right: 180px;
       bottom: 65px;
