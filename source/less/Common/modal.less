@@ -1,14 +1,31 @@
 .modal {
-  display: none;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+
+  &--visible {
+    display: block;
+  }
+
+  &--unvisible {
+    display: none;
+  }
+}
+
+.modal__wrapper {
   width: 320px;
-  min-height: 301px;
+  min-height: 305px;
   position: fixed;
   top: 30vh;
   left: 50vw;
   margin-left: -170px;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(236, 236, 236);
-  padding-top: 35px;
+  padding-top: 30px;
+  box-shadow: 0 5px 10px lightgray;
 }
 
 .modal__title {
@@ -26,28 +43,29 @@
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
-  width: 150px;
+  text-align: center;
+  width: auto;
   color: rgb(68, 68, 68);
-  margin: 25px auto 0 auto;
+  margin: 11px auto 0 auto;
 }
 
 .modal__list {
   padding: 0;
   list-style: none;
   display: flex;
-  margin: 30px auto 0 auto;
+  margin: 25px auto 0 auto;
   justify-content: space-between;
   width: 260px;
 }
 
 .modal__item {
   font-size: 17px;
-  line-height: 50px;
+  line-height: 48px;
   font-weight: 400;
   color: rgb(68, 68, 68);
   border: 2px solid rgb(236, 236, 236);
   display: inline-block;
-  width: 80px;
+  width: 78px;
   text-align: center;
   cursor: pointer;
 
@@ -68,31 +86,45 @@
 .modal__button {
   display: block;
   width: 260px;
-  margin: 30px auto 0 auto;
+  margin: 31px auto 0 auto;
   line-height: 48px;
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
-  .modal {
+  .modal__wrapper {
     width: 566px;
-    min-height: 336px;
     margin-left: -293px;
+    padding-top: 35px;
+    padding-bottom: 0;
   }
 
   .modal__title {
     font-size: 30px;
     line-height: 57px;
+    width: 370px;
   }
 
   .modal__size-select {
     font-size: 17px;
     line-height: 30px;
   }
+
+  .modal__list {
+    width: 350px;
+  }
+
+  .modal__item {
+    width: 107px;
+  }
+
+  .modal__button {
+    width: 350px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .modal {
+  .modal__wrapper {
     width: 567px;
   }
 }
