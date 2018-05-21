@@ -45,12 +45,6 @@ gulp.task("compressjs", function (cb) {
   )
 });
 
-gulp.task("compresshtml", function() {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
-});
-
 gulp.task("sprite", function () {
   return gulp.src("source/img/{icon,logo}-*.svg")
     .pipe(svgstore({
@@ -65,6 +59,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
 
@@ -91,7 +86,6 @@ gulp.task("build", function (done) {
     "copy",
     "style",
     "compressjs",
-    "compresshtml",
     "sprite",
     "html",
     done
