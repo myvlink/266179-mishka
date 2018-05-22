@@ -1,0 +1,3 @@
+[submodule "build/gh-pages"]
+	path = build/gh-pages
+	url = git@github.com:myvlink/gh-pages.git
